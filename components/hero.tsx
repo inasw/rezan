@@ -33,28 +33,30 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-primary/30 rounded-full filter blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2 glow-pulse" />
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         {/* Left content */}
-        <div className="slide-up space-y-8">
-          <div>
-            <h2 className="text-lg font-semibold text-primary uppercase tracking-widest mb-4">Awaken the Tradition</h2>
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-balance">Rezan Kineto</h1>
-            <p className="text-xl text-muted-foreground mt-4 leading-relaxed text-balance">
-              A fermented Ethiopian drink crafted with generations of tradition, revitalized for the modern world.
+        <div className="slide-up space-y-10">
+          <div className="space-y-6">
+            <p className="text-whisper text-primary/80">From Ancient Grains</p>
+            <h1 className="text-7xl md:text-8xl text-ceremonial text-balance fade-in-ceremonial">
+              Rezan<br />
+              <span className="text-primary">Kineto</span>
+            </h1>
+            <p className="text-xl text-foreground/70 mt-6 text-grounded max-w-md">
+              Ethiopian fermented tradition, handed down through generations. Where ceremony meets sustenance, where patience becomes spirit.
             </p>
           </div>
 
-          <p className="text-base text-foreground/90 max-w-md leading-relaxed">
-            Experience the authentic taste of Ethiopian heritage. Bold, energetic, and deeply rooted in centuries-old
-            craftsmanship.
+          <p className="text-base text-grounded text-foreground/80 max-w-lg border-l-2 border-primary/30 pl-6">
+            Each sip carries the wisdom of centuries. Barley transformed by time, blessed by tradition, alive with the energy of our ancestors.
           </p>
 
-          <div className="flex gap-4 pt-4">
-            <button className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-semibold hover:scale-105 transition-all duration-300 btn-shadow">
-              Discover Now
+          <div className="flex gap-4 pt-6">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:scale-105 transition-all duration-300 btn-shadow text-base">
+              Begin the Journey
             </button>
-            <button className="px-8 py-3 border border-primary text-primary rounded-full font-semibold hover:bg-primary/20 transition-all duration-300 btn-shadow">
-              Learn More
+            <button className="px-8 py-4 border-2 border-primary/40 text-primary rounded-full font-medium hover:bg-primary/10 hover:border-primary transition-all duration-300">
+              Our Story
             </button>
           </div>
         </div>

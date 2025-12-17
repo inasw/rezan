@@ -24,25 +24,28 @@ export default function HowWeMakeIt() {
 
   const steps = [
     {
-      number: "01",
-      title: "Fermentation",
+      symbol: "◈",
+      title: "Awakening",
+      subtitle: "First Stage",
       icon: Flame,
       description:
-        "Traditional fermentation using carefully selected grains and pure spring water, allowing natural cultures to develop the signature taste.",
+        "Barley meets water. Time begins its slow work. Natural cultures awaken, transforming grain into something alive. No rush, no force. Only patience.",
     },
     {
-      number: "02",
-      title: "Mixing",
+      symbol: "◉",
+      title: "Deepening",
+      subtitle: "Second Stage",
       icon: Clock,
       description:
-        "Expert blending of fermented base with secret spice combinations, each batch crafted to achieve the perfect balance of flavors.",
+        "Ancient spices join the dance. Each ingredient chosen through generations of wisdom. Flavors merge, deepen, become whole. The wait continues.",
     },
     {
-      number: "03",
-      title: "Bottling",
+      symbol: "◊",
+      title: "Blessing",
+      subtitle: "Third Stage",
       icon: Package,
       description:
-        "Careful bottling under strict quality control, ensuring every bottle delivers the authentic Rezan Kineto experience.",
+        "With ceremony, we seal each vessel. What was grain is now spirit. What was separate is now unified. The tradition passes forward.",
     },
   ]
 
@@ -50,46 +53,51 @@ export default function HowWeMakeIt() {
     <section id="craft" ref={sectionRef} className="relative py- md:py- bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className={`text-center mb-16 ${isVisible ? "fade-in" : "opacity-0"}`}>
-          <p className="text-lg font-semibold text-primary uppercase tracking-widest mb-4">THE CRAFT</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-balance">
-            HOW WE <span className="text-primary">MAKE IT</span>
+        <div className={`text-center mb-20 ${isVisible ? "fade-in-ceremonial" : "opacity-0"}`}>
+          <p className="text-whisper text-primary/70 mb-6">The Sacred Process</p>
+          <h2 className="text-5xl md:text-6xl text-ceremonial leading-tight text-balance mb-6">
+            Three Stages of <span className="text-primary">Becoming</span>
           </h2>
-          <p className="text-muted-foreground mt-6 max-w-2xl mx-auto text-lg">
-            Every bottle of Rezan Kineto goes through a meticulous three-step process, combining ancient wisdom with
-            modern precision.
+          <p className="text-grounded text-foreground/70 mt-8 max-w-2xl mx-auto text-lg">
+            Each bottle follows an ancient path. From raw grain to living spirit, transformation unfolds through patience, care, and reverence.
           </p>
         </div>
 
         {/* Process Steps */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {steps.map((step, index) => {
             const IconComponent = step.icon
             return (
               <div
                 key={index}
-                className={`group relative p-8 rounded-2xl border border-primary/20 bg-card/40 hover:bg-primary/10 transition-all duration-500 hover:scale-110 hover:-translate-y-3 ${
-                  isVisible ? "float-up" : "opacity-0"
+                className={`group relative p-10 rounded-2xl border border-primary/10 bg-card/30 hover:bg-card/50 hover:border-primary/30 transition-all duration-700 hover:scale-105 hover:-translate-y-2 ${
+                  isVisible ? "scale-in" : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="w-16 h-16 flex items-center justify-center text-primary mb-6 group-hover:scale-125 transition-transform duration-500">
-                  <IconComponent size={40} strokeWidth={1.5} />
+                <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                <div className="relative z-10 space-y-5">
+                  <div className="flex items-center justify-between">
+                    <div className="w-14 h-14 flex items-center justify-center text-primary/70 group-hover:text-primary group-hover:scale-110 transition-all duration-500">
+                      <IconComponent size={32} strokeWidth={1.5} />
+                    </div>
+                    <div className="text-5xl text-primary/50 group-hover:text-primary/70 group-hover:scale-110 transition-all duration-500">
+                      {step.symbol}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-whisper text-primary/50 group-hover:text-primary/70 mb-2 transition-colors">
+                      {step.subtitle}
+                    </p>
+                    <h3 className="text-3xl text-ceremonial text-foreground mb-4">{step.title}</h3>
+                  </div>
+
+                  <p className="text-grounded text-foreground/70 leading-relaxed">{step.description}</p>
                 </div>
 
-                {/* Step number overlay */}
-                <div className="absolute top-6 right-6 text-6xl font-bold text-primary/80 group-hover:text-primary/20 transition-colors">
-                  {step.number}
-                </div>
-
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-3 text-foreground">{step.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed text-sm">{step.description}</p>
-                </div>
-
-                {/* Accent line on hover */}
-                <div className="absolute bottom-0 left-0 h-1 bg-linear-to-r from-primary to-accent w-0 group-hover:w-full transition-all duration-500" />
+                <div className="absolute bottom-0 left-0 h-0.5 bg-linear-to-r from-primary via-accent to-transparent w-0 group-hover:w-full transition-all duration-700" />
               </div>
             )
           })}

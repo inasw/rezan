@@ -54,36 +54,35 @@ export default function About() {
           </div>
 
           {/* Right content */}
-          <div className={`space-y-6 ${isVisible ? "slide-in-right" : "opacity-0"}`}>
-            <div>
-              <h2 className="text-lg font-semibold text-primary uppercase tracking-widest mb-2">
-                What is Rezan Kineto?
-              </h2>
-              <h3 className="text-4xl font-bold leading-tight text-balance">Ancient Wisdom Meets Modern Energy</h3>
+          <div className={`space-y-8 ${isVisible ? "slide-up" : "opacity-0"}`}>
+            <div className="space-y-4">
+              <p className="text-whisper text-primary/70">Living Heritage</p>
+              <h3 className="text-5xl text-ceremonial leading-tight text-balance">
+                Where Grain Becomes Spirit
+              </h3>
             </div>
 
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              Rezan Kineto is more than a drink—it&apos;s a connection to Ethiopian heritage. Fermented through
-              traditional methods passed down through generations, it embodies the spirit of our ancestors.
+            <p className="text-lg text-grounded text-foreground/75 leading-relaxed">
+              Rezan Kineto is not merely a drink. It is a sacred vessel, carrying centuries of Ethiopian wisdom. Through traditional fermentation, we honor the patience of our ancestors who understood that transformation takes time.
             </p>
 
-            <div className="space-y-4 pt-4">
+            <div className="space-y-5 pt-6">
               {[
-                { title: "100% Natural Ingredients", desc: "Crafted without artificial additives or preservatives" },
-                { title: "Traditional Fermentation", desc: "Centuries-old techniques for authentic flavor" },
-                { title: "Energy & Wellness", desc: "Packed with natural nutrients and vitality" },
+                { title: "Untouched by Industry", desc: "Pure barley, pure water, pure tradition. No additives interrupt the ancient dialogue." },
+                { title: "Time-Honored Ritual", desc: "Each batch follows ceremonies passed down through generations. Patience cannot be rushed." },
+                { title: "Living Nourishment", desc: "Fermentation creates life. Probiotics dance, enzymes awaken. Nature's alchemy." },
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`flex gap-4 items-start group cursor-pointer ${isVisible ? "float-up" : "opacity-0"}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  className={`flex gap-4 items-start group cursor-default ${isVisible ? "scale-in" : "opacity-0"}`}
+                  style={{ animationDelay: `${i * 0.15}s` }}
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1 group-hover:bg-primary/40 transition-colors">
-                    <span className="text-primary text-sm">✓</span>
+                  <div className="w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center shrink-0 mt-1 group-hover:bg-primary/30 transition-all duration-500">
+                    <span className="text-primary text-base">◉</span>
                   </div>
-                  <div className="group-hover:translate-x-2 transition-transform">
-                    <h4 className="font-semibold text-foreground">{item.title}</h4>
-                    <p className="text-sm text-foreground/60 mt-1">{item.desc}</p>
+                  <div className="group-hover:translate-x-1 transition-transform duration-500">
+                    <h4 className="font-medium text-foreground text-base mb-2">{item.title}</h4>
+                    <p className="text-sm text-grounded text-foreground/65">{item.desc}</p>
                   </div>
                 </div>
               ))}

@@ -1,17 +1,33 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Cormorant_Garamond, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-display",
+  display: "swap"
+})
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "Rezan Kineto | Ancient Energy, Modern Spirit",
   description:
-    "Discover Rezan Kineto - a traditional Ethiopian fermented drink crafted with generations of tradition, revitalized for the modern world.",
+    "Ethiopian fermented tradition, handed down through generations. Rezan Kineto honors sacred barley fermentation rituals, transforming ancient grain into living spirit. Where ceremony meets sustenance.",
+  keywords: "Ethiopian fermented drink, traditional fermentation, Rezan Kineto, barley drink, Ethiopian heritage, ancient beverages, fermented tradition",
+  openGraph: {
+    title: "Rezan Kineto | Ancient Energy, Modern Spirit",
+    description: "Ethiopian fermented tradition, handed down through generations. Where ceremony meets sustenance, where patience becomes spirit.",
+    type: "website",
+  },
   generator: "v0.app",
   icons: {
     icon: [
@@ -39,7 +55,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`font-sans antialiased bg-background text-foreground`}>
+      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider>
           {children}
           <Analytics />
