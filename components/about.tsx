@@ -26,11 +26,11 @@ export default function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-20 md:py-32 bg-linear-to-b from-background via-background to-card/20"
+      className="relative py- md:py bg-linear-to-b from-background via-background to-card/20"
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-15 items-center">
-          {/* Left image (match Hero card styling) */}
+          {/* Left image  */}
           <div className={`relative w-full h-96 md:h-full min-h-96 flex items-center justify-center transform -translate-x-4 md:-translate-x-8 ${isVisible ? "scale-in" : "opacity-0"}`}>
             <div className="relative w-full h-full">
               {/* Card glow */}

@@ -47,7 +47,7 @@ export default function HowWeMakeIt() {
   ]
 
   return (
-    <section id="craft" ref={sectionRef} className="relative py-20 md:py-32 bg-background overflow-hidden">
+    <section id="craft" ref={sectionRef} className="relative py- md:py- bg-background overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className={`text-center mb-16 ${isVisible ? "fade-in" : "opacity-0"}`}>

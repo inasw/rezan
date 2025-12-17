@@ -30,7 +30,7 @@ export default function CTA() {
   ]
 
   return (
-    <section ref={sectionRef} className="relative py-20 md:py-32 bg-background overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 md:py-22 bg-background overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 -right-64 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl opacity-30 animate-pulse" />
@@ -88,7 +88,7 @@ export default function CTA() {
           </div>
         )}
 
-        <p className="text-xs text-foreground/50 pt-4">Free shipping on orders over $50</p>
+        <p className="text-xs text-foreground/50 pt-4">Free delevery on orders over 10000ETB</p>
       </div>
     </section>
   )

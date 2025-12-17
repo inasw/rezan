@@ -7,6 +7,8 @@ import HowWeMakeIt from "@/components/how-we-make-it"
 import CTA from "@/components/cta"
 import Footer from "@/components/footer"
 import FloatingBubbles from "@/components/floating-bubbles"
+import Founders from "@/components/founders"
+import Testimonials from "@/components/testimonials"
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <About />
       <Story />
       <HowWeMakeIt />
+      <Founders/>
+      <Testimonials/>
       <CTA />
       <Footer />
     </div>

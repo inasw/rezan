@@ -66,7 +66,7 @@ export default function Hero() {
             style={{
               transform: `translateX(${mousePosition.x}px) translateY(${mousePosition.y}px)`,
             }}
-            className="transition-transform duration-100 ease-out"
+            className="transition-transform duration-50 ease-out"
           >
             <div className="relative w-72 h-96">
               {/* Bottle glow background */}
